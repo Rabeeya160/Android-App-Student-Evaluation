@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".OrderSummaryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#EF3D59"
+                        android:fontFamily="@font/quicksand"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Order Summary"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="#c1c1c1"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/nicholson"
+                            android:gravity="center_horizontal"
+                            android:text="SKU"
+                            android:textColor="#000"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/nicholson"
+                            android:gravity="center_horizontal"
+                            android:text="QUANTITY"
+                            android:textColor="#000"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/nicholson"
+                            android:gravity="center_horizontal"
+                            android:text="AMOUNT"
+                            android:textColor="#000"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="#c1c1c1"></View>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyler_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#EF3D59"
+                            android:fontFamily="@font/nicholson"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:text="Promo"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/nicholson"
+                                android:gravity="center_horizontal"
+                                android:text="SKU"
+                                android:textColor="#000"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/nicholson"
+                                android:gravity="center_horizontal"
+                                android:text="QUANTITY"
+                                android:textColor="#000"
+                                android:textSize="@dimen/_11ssp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:background="#c1c1c1"></View>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/summary_promo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="#acacac"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#EF3D59"
+                            android:fontFamily="@font/nicholson"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:text="Financial Summary"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_7sdp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="Gross Total:"
+                                        android:textSize="@dimen/_17ssp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_gross_total"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:textSize="@dimen/_15ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="Discount:"
+                                        android:textSize="@dimen/_17ssp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_percentage"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:textSize="@dimen/_15ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_7sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone"
+                                    android:weightSum="8">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2.5"
+                                        android:text="GST:"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_gst"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="WHT:"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_wht"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_7sdp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="6">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:text="Invoice Ref:"
+                                        android:textSize="@dimen/_17ssp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_refrence"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="6">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="4"
+                                        android:text="Grand Total:"
+                                        android:textSize="@dimen/_17ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_Grand_total"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:textSize="@dimen/_15ssp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <EditText
+                                    android:visibility="gone"
+                                    android:id="@+id/et_receivedAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:background="@drawable/back_input_login"
+                                    android:hint="Enter Received Amount" />
+
+                                <Button
+                                    android:visibility="gone"
+                                    android:id="@+id/btn_receivedPayment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/sale_button"
+                                    android:fontFamily="@font/nicholson"
+                                    android:text="Send Payment"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/_15ssp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

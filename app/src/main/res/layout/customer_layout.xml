@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/customers"
+            android:paddingLeft="@dimen/_7sdp"
+            app:civ_border_color="#a9a9a9"
+            app:civ_border_width="@dimen/_1sdp"
+            android:tint="#ffffff"/>
+
+        <!--<View-->
+            <!--android:layout_width="0.05dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="@dimen/_10sdp"-->
+            <!--android:layout_marginLeft="@dimen/_5sdp"-->
+            <!--android:layout_marginRight="@dimen/_5sdp"-->
+            <!--android:layout_marginTop="@dimen/_10sdp"-->
+            <!--android:background="#cccccc" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/customer_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand"
+                android:gravity="center_vertical"
+                android:text="Out Let Name"
+                android:textColor="#29b6f6"
+                android:textSize="@dimen/_15ssp"/>
+
+            <TextView
+                android:id="@+id/customer_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand"
+                android:gravity="center_vertical"
+                android:text="Address"
+                android:textColor="#29b6f6"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:id="@+id/customer_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand"
+                android:gravity="center_vertical"
+                android:text="phone"
+                android:textColor="#29b6f6"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="0.05dp"
+        android:background="#cccccc" />
+</LinearLayout>
